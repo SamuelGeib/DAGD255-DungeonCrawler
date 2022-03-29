@@ -15,10 +15,10 @@ class Circle extends AABB {
   }
   
   boolean isOnScreen() {
-    if (x <= cam.x)                         return false;
-    if (x >= cam.x + width + diameter/2)    return false;
-    if (y <= cam.y)                         return false;
-    if (y >= cam.y + height + diameter/2)   return false; 
+    if (x <= cam.x - diameter)                         return false;
+    if (x >= cam.x + width + diameter)                 return false;
+    if (y <= cam.y - diameter)                         return false;
+    if (y >= cam.y + height + diameter)                return false; 
     return true; 
   }
   
